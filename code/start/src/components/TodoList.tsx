@@ -16,10 +16,15 @@ function TodoList() {
       {todos.map((todo) => (
         <li key={todo.id}>
           <span onClick={() => toggleTodo(todo.id)}>
-            {todo.text} - {todo.completed ? "Completed" : "Pending"}
+            {todo.text} -{" "}
+            {todo.completed
+              ? "Completed"
+              : "Pending"}
           </span>
 
-          <button onClick={() => deleteTodo(todo.id)}>
+          <button
+            onClick={() => deleteTodo(todo.id)}
+          >
             Delete
           </button>
         </li>
